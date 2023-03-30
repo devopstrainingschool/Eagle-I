@@ -24,8 +24,13 @@ pipeline {
     }
     
  }
+    stage ('Maven docker') {
+      steps {
+      sh 'mvn docker'
+      }
     
-    
+    }
+
     
     }
     

@@ -1,0 +1,29 @@
+pipeline {
+  agent any
+  tools {
+    maven "eagle-i"
+  }
+  environment {
+  
+       IMAGE_TAG = "${BUILD_NUMBER}"
+    
+  }
+
+
+  stages {
+    stage ('Maven clean') {
+      steps {
+      sh 'mvn clean'
+      }
+  
+    }
+    
+    
+    
+    
+    
+  }
+    
+    
+    
+}    

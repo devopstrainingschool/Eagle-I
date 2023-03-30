@@ -24,14 +24,14 @@ pipeline {
     }
     
  }
-    stage ('Maven docker') {
+    stage ('Docker build') {
       steps {
-      sh 'mvn docker'
+      sh 'docker build -t devopstrainingschool/eagle-i:IMAGE_TAG .  '
       }
     
     }
 
-    
+
     }
     
     
